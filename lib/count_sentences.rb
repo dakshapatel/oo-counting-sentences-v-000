@@ -15,8 +15,7 @@ class String
   end
 
   def count_sentences
-    sentence_array = self.split(/[.?!]/)
-    return sentence_array.count
+    self.split(/[.?!]+/).grep(/\S/).count
     # self.split(/\.|\?|\!/).reject{|w| w.empty?}.size
     #self.split(/\.|\?|\!/).count || self.split(/\.|\?|\!/).
   end
